@@ -77,4 +77,17 @@ object Basics extends App {
     // It has variables and loops but this is very discouraged in Scala - need to think in terms of functions and recursion
 
 
+  // Unit return types
+    // everything so far returned a String or an Int
+    // the Unit type = no meaningful value === "void" in other languages
+    printLn("I love Scala")
+      // this doesn't return any meaningful value
+      // we think of the Unit type in type of SIDE EFFECTS
+        // relate to printing something on screen, sending something to a socket or server, storing something in a file, has nothing to do with computing meaningful information
+        // every print statement will return Unit
+        // console.log is an equivalent function that returns void in other languages
+  def myUnitReturningFunction(): Unit = {
+    printLn("I don't love returning Unit")
+  }
+  val theUnit = ()
 }
