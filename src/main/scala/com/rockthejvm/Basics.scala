@@ -43,4 +43,38 @@ object Basics extends App {
   }
   // no type mentioned here - but this code block will be assigned Int because the final return value is Int type
 
+  // Define a function
+  def myFunction(x: Int, y: String): String = y + " " + x
+    // defining a function, you have your arguments and their types
+    // the type of the return value (in this case : String)
+    // return a single expression
+  def sameFunction(x: Int, y:String): String = {
+    y + " " + x
+  }
+  // can use curly braces if the expression goes over multiple lines
+
+  // functions are usually recursive in practice
+  def factorial(n: Int): Int = {
+    if (n<=1) 1
+    else n * factorial(n-1)
+  }
+    // will return the product of all the numbers from 1 up to n
+    /*
+      factorial(5) = 5 * factorial(4)
+      factorial(4) = 4 * factorial(3)
+      factorial(3) = 3 * factorial(2)
+      factorial(2) = 2 * factorial(1)
+      factorial(1) = 1
+
+      so factorial(1) = 1
+      factorial(2) = 2 * 1
+      factorial(3) = 3 * 2
+      factorial(4) = 4 * 6
+      factorial(5) = 5 * 24 = 120
+    */
+
+    // in Scala we don't use loops or iteration, we use RECURSION!
+    // It has variables and loops but this is very discouraged in Scala - need to think in terms of functions and recursion
+
+
 }
